@@ -1,0 +1,596 @@
+/* 
+  Targetting all elements and pseudo-elements with *
+  This might not work perfectly with all browsers due to limitations with the universal selector.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Resetting margins */
+* {
+  margin: 0;
+}
+
+/* Typography tweaks */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 
+  Setting display for images and some media elements 
+  to ensure consistent behavior across browsers 
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 
+  Removing default styles from form elements 
+  like buttons and inputs for more control 
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 
+  Prevent text overflowing its container by enabling line breaks 
+  at designated points
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+
+
+
+/* 
+    Animations Keyframes
+*/
+
+@keyframes apper {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+    ;
+  }
+
+}
+
+.blocks {
+  animation: apper 0.2s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+
+/* 
+  Create a stacking context for the root element 
+  to avoid unexpected positioning issues with child elements
+*/
+html {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 100pc;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(44, 46, 2);
+  border-radius: 10px;
+}
+
+/* 
+  Started Stylizing System
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "montserrat regular", sans-serif;
+  animation: apper 0.2s ease-in-out;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f461;
+  backdrop-filter: blur(10px);
+  padding: 10px 30px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  box-shadow: 0px 4px 6px #0000001a;
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  margin: 0;
+  width: 80%;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.navbar .logo img {
+  height: 80px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/*HERO Section*/
+
+.hero {
+  width: 100%;
+  height: 720px;
+  background-image: url("/img/Background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroText {
+  font-size: 55px;
+  font-family: 'montserrat black';
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  color: #ffffff;
+  text-shadow: 5px 2px 5px #171f17;
+}
+
+.heroText>span {
+  font-family: 'montserrat black';
+  color: #ffe9b9;
+}
+
+.buttonWrap {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+
+.buttonWrap>button {
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 5px;
+  border: 0px;
+  width: 180px;
+  background-color: #171f17;
+  color: white;
+  transition: 200ms ease-in;
+}
+
+.buttonWrap>.main {
+  background-color: #006e5e;
+}
+
+.buttonWrap>button:hover {
+  transform: scale(1.1);
+}
+
+/* peace of code to house the section's and put their internal contets in a flex box*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container>h2 {
+  margin-top: 50px;
+  font-size: 55px;
+  font-weight: 600;
+  border-bottom: black 3px solid;
+}
+
+
+/*Services Section*/
+
+.services {
+  width: 100%;
+  height: 720px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.services>div {
+  padding: 20px;
+  width: 300px;
+  border-radius: 20px;
+  margin: 10px;
+  color: #000000;
+}
+
+.card {
+  height: 75%;
+  width: 600px;
+  background-size: cover;
+  font-family: 'montserrat';
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 2px 10px 5px #00000047;
+}
+
+.card>h4 {
+  font-size: 30px;
+  font-style: bolder;
+  color: #f4f4f4;
+  background-color: #00000036;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card>p {
+  background-color: #00000036;
+  text-align: left;
+  color: #f4f4f4;
+  margin-bottom: 20px;
+  border-radius: 10px 0px 10px 10px;
+}
+
+.card>button {
+  background-color: #006e5e;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.card>button:hover {
+  background-color: #008d78;
+  transform: scale(1.1);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.st1 {
+  background-image: url("/img/card1.jpg");
+}
+
+.st2 {
+  background-image: url("/img/card2.webp");
+}
+
+.st3 {
+  background-image: url("/img/card3.jpg");
+}
+
+.st4 {
+  background-image: url("/img/card4.png");
+}
+
+
+/* About Us Section */
+.about {
+  background-color: #ffffff;
+}
+
+.holder {
+  height: 720px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.holder>div {
+  max-width: 45%;
+  margin: 20px;
+}
+
+/* Our Teams Section */
+
+.ourTeam {
+  background-color: #e1e1e1;
+}
+
+.teams {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+}
+
+.teamCard {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  background-color: #006E5E;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.cardImage1 {
+  height: 330px;
+  width: 330px;
+  background-color: #ffe9b9;
+  background-image: url(/img/Users/image_1.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.cardImage2 {
+  height: 330px;
+  width: 330px;
+  background-color: #ffe9b9;
+  background-image: url(/img/Users/image_2.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.cardImage3 {
+  height: 330px;
+  width: 330px;
+  background-color: #ffe9b9;
+  background-image: url(/img/Users/image_3.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.teamCard:hover {
+  transform: translateY(-20px);
+  box-shadow: 1px 5px 10px #000000;
+}
+
+.teamCard>p {
+  bottom: 0px;
+  margin: 20px;
+}
+
+/* .image {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.housing {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.verBar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 0.5625rem;
+  height: 27.0625rem;
+  transform: translateX(-50%);
+  background: radial-gradient(50% 50% at 50% 50%, #C6BC5B 44.67%, rgba(255, 255, 255, 0.00) 100%);
+  z-index: 9;
+}
+
+.horBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 27.0625rem;
+  height: 0.5625rem;
+  transform: translateY(-50%);
+  background: radial-gradient(50% 50% at 50% 50%, #C6BC5B 44.67%, rgba(255, 255, 255, 0.00) 100%);
+  z-index: 9;
+} */
+
+.image>img {
+  transform: scale(75%);
+}
+
+/* Footer section */
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: #e9eb7f;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #000000;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #000000;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #000000;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("/img/wave@4x.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+
+  100% {
+    background-positon-x: 0px;
+  }
+}

@@ -1,0 +1,167 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.border {
+    height: 150px;
+    transition: filter 1s;
+    background-color: #fff3bb;
+}
+
+.holder {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-bottom: 100px;
+}
+
+.sidebar1 {
+    border-radius: 10px 5px 5px 10px;
+    background-color: #7C5130;
+    height: 90%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    padding-top: 50px;
+    padding-left: 50px;
+    justify-content: left;
+    align-content: center;
+    color: white;
+    box-shadow: 2px 5px 5px #0000001c;
+}
+
+
+.textele {
+    font-family: "montserrat";
+    display: flex;
+    flex-direction: column;
+}
+
+.textele p {
+    font-weight: 100;
+    border-bottom: 3px white solid;
+}
+
+
+.mainCont {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.mainCont div {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.smIcon {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    gap: 10px;
+}
+
+.smIcon img {
+    width: 40px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+.smIcon img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 10px 3px #fff3bb;
+}
+
+
+.sidebar2 {
+    border-radius: 5px 10px 10px 5px;
+    background-color: rgb(255, 255, 255);
+    height: 90%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    justify-content: right;
+    align-content: center;
+    box-shadow: 2px 5px 5px #0000001c;
+}
+
+form {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.input_box {
+    height: 50px;
+    width: 100%;
+    margin: 12px 0px;
+}
+
+.input_box .username {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    align-items: center;
+}
+
+.input_box>input,
+.input_box>div>input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 1px #242424 dashed;
+    background-color: none;
+    outline: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.input_box>button {
+    float: right;
+    margin-top: 10%;
+    width: auto;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-family: "Montserrat";
+    background-color: #7C5130;
+    transition: all 0.1s ease-in-out;
+}
+
+.input_box>button:hover {
+    transform: translatey(-3px);
+    box-shadow: 0px 2px 5px black;
+    border: none;
+    color: white;
+    background-color: #7C5130;
+}
+
+.input_box>button:focus {
+    transform: translatey(3px);
+    box-shadow: 1px 2px 5px black;
+    border: none;
+    color: white;
+    background-color: #7C5130;
+}
+
+.input_box>input,
+.input_box>div>input:focus {
+    border-bottom: 2px black solid;
+}
+
+textarea {
+    outline: none;
+    border: none;
+    border-bottom: 1px #242424 dashed;
+    transition: all 0.3s;
+}
+
+textarea:focus {
+    border-bottom: 2px black solid;
+}

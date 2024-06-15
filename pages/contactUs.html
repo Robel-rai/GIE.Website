@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/ContactUs.css">
+    <link rel="icon" href="/img/logo-url.svg">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <img src="/img/GIE-logo.png" alt="GIE">
+        </div>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#ourServices">Services</a></li>
+            <li><a href="#Teams">Team</a></li>
+            <li><a href="#aboutUs">About us</a></li>
+            <li><a href="/pages/contactUs.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="border"></div>
+
+    <!-- Form and Contact Us -->
+    <div class="holder">
+        <div class="sidebar1">
+            <div class="textele">
+                <div>
+                    <h1>Contact Infromation</h1>
+                    <p>Don't forget to say HI</p>
+                </div>
+            </div>
+
+            <div class="mainCont">
+                <div>
+                    <img src="/img/icons/mailbox-svgrepo-com.svg" alt="email icon" width="24px">
+                    <p>sample@info.com</p>
+                </div>
+
+                <div>
+                    <img src="/img/icons/phone-calling-rounded-svgrepo-com.svg" alt="Phone Icon" width="24px">
+                    <p>09347498759 or 096761231</p>
+                </div>
+
+                <div>
+                    <img src="/img/icons/point-on-map-svgrepo-com.svg" alt="location Icon" width="24px">
+                    <p>Leghar Orda Tower 15th Floor| Addis Abeba Ethiopia </p>
+                </div>
+            </div>
+
+            <div class="smIcon">
+                <img src="/img/icons/Socail media/facebook-round-svgrepo-com.svg" alt=" facebook">
+                <img src="/img/icons/Socail media/linkedin-round-svgrepo-com.svg" alt="linkedin">
+                <img src="/img/icons/Socail media/instagram-round-svgrepo-com.svg" alt="instagram">
+                <img src="/img/icons/Socail media/telegram-svgrepo-com.svg" alt="telegram">
+            </div>
+        </div>
+        <div class="sidebar2">
+            <h1>Forward a Massage</h1>
+            <p>
+                We see you cruised on over to our contact us page, and let us tell you, we're absolutely thrilled!
+            </p>
+            <form action="sendemail.php">
+                <div class="input_box">
+                    <div class="username">
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+                    <div class="input_box">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input_box">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="input_box">
+                        <textarea name="comment" id="comment" placeholder="Say what you need to say" rows="4"
+                            cols="75"></textarea>
+                    </div>
+                    <div class="input_box">
+                        <button class="button">Send Massage</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="/scripts/script.js"></script>
+    </div>
+
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/gsofethiopia/">
+                    <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-linkedin" role="img" class="md hydrated" aria-label="logo linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-instagram" role="img" class="md hydrated"
+                        aria-label="logo instagram"></ion-icon>
+                </a></li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#home">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#ourServices">Services</a></li>
+            <li class="menu__item"><a class="menu__link" href="#Teams">Team</a></li>
+            <li class="menu__item"><a class="menu__link" href="/pages/contactUs.html">Contact</a></li>
+        </ul>
+        <p>©2024 GIE | All Rights Reserved</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
