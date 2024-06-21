@@ -93,7 +93,7 @@ form {
     margin-top: 5%;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 10px;
 }
 
 .input_box {
@@ -105,22 +105,19 @@ form {
 .input_box .username {
     display: flex;
     flex-direction: row;
-    gap: 10%;
     align-items: center;
+    gap: 5%;
 }
 
-.input_box>input,
-.input_box>div>input {
-    height: 100%;
-    width: 100%;
-    border: none;
-    border-bottom: 1px #242424 dashed;
-    background-color: none;
-    outline: none;
-    transition: all 0.1s ease-in-out;
+.input_box .userContact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
 }
 
-.input_box>button {
+
+#button {
     float: right;
     margin-top: 10%;
     width: auto;
@@ -134,7 +131,7 @@ form {
     transition: all 0.1s ease-in-out;
 }
 
-.input_box>button:hover {
+#button:hover {
     transform: translatey(-3px);
     box-shadow: 0px 2px 5px black;
     border: none;
@@ -142,12 +139,15 @@ form {
     background-color: #7C5130;
 }
 
-.input_box>button:focus {
-    transform: translatey(3px);
-    box-shadow: 1px 2px 5px black;
+.input_box>input,
+.input_box>div>input {
+    height: 100%;
+    width: 100%;
     border: none;
-    color: white;
-    background-color: #7C5130;
+    border-bottom: 1px #242424 dashed;
+    background-color: none;
+    outline: none;
+    transition: all 0.1s ease-in-out;
 }
 
 .input_box>input,
@@ -155,13 +155,13 @@ form {
     border-bottom: 2px black solid;
 }
 
-textarea {
+#message {
     outline: none;
     border: none;
     border-bottom: 1px #242424 dashed;
-    transition: all 0.3s;
+    transition: all 0.1s;
 }
 
-textarea:focus {
+#message:focus {
     border-bottom: 2px black solid;
 }

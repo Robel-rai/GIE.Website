@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/ContactUs.css">
     <link rel="icon" href="/img/logo-url.svg">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "_IBNA-n_3ln1aa_Fm",
+            });
+        })();
+    </script>
     <title>Contact Us</title>
 </head>
 
@@ -60,34 +69,45 @@
             </div>
         </div>
         <div class="sidebar2">
+
             <h1>Forward a Massage</h1>
             <p>
                 We see you cruised on over to our contact us page, and let us tell you, we're absolutely thrilled!
             </p>
-            <form action="sendemail.php">
+
+            <form id="form">
                 <div class="input_box">
                     <div class="username">
-                        <input type="text" placeholder="First Name" required>
-                        <input type="text" placeholder="Last Name" required>
-                    </div>
-                    <div class="input_box">
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="input_box">
-                        <input type="tel" placeholder="Phone Number" required>
-                    </div>
-                    <div class="input_box">
-                        <textarea name="comment" id="comment" placeholder="Say what you need to say" rows="4"
-                            cols="75"></textarea>
-                    </div>
-                    <div class="input_box">
-                        <button class="button">Send Massage</button>
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstName" required>
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastName" required>
                     </div>
                 </div>
+                <div class="input_box">
+                    <div class="userContact">
+                        <label for="phoneNumber">Phone</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber" required>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" required>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <label for="message">Message</label>
+                    <input type="text" name="message" id="message">
+                </div>
+                <input type="submit" id="button" value="Send Email">
             </form>
         </div>
+
+
         <script src="/scripts/script.js"></script>
+        <script src="/scripts/sendemail.js"></script>
     </div>
+
+
+    <!--Fotter Startes here-->
+
 
     <footer class="footer">
         <div class="waves">

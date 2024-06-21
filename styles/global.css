@@ -78,11 +78,6 @@ h6 {
 
 }
 
-.blocks {
-  animation: apper 0.2s ease-in-out;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
 
 
 /* 
@@ -119,7 +114,6 @@ html {
 body {
   margin: 0;
   font-family: "montserrat regular", sans-serif;
-  animation: apper 0.2s ease-in-out;
 }
 
 .navbar {
@@ -172,6 +166,7 @@ body {
 }
 
 /*HERO Section*/
+
 
 .hero {
   width: 100%;
@@ -338,10 +333,114 @@ body {
   background-image: url("/img/card4.png");
 }
 
+/* Our Teams Section */
+#Teams {
+  background-color: #e3e3e3;
+  padding-bottom: 100px;
+}
+
+.hierarchy {
+  display: flex;
+  justify-content: center;
+}
+
+.tcard {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.profile>img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.profile h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.profile p {
+  color: #888;
+}
+
+.subordinates {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tcard::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 2px;
+  height: 10px;
+  background-color: #ddd;
+}
+
+.tcard:not(:first-child)::before {
+  top: 0;
+  height: 20px;
+}
+
+.subordinates::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 2px;
+  height: 10px;
+  background-color: #ddd;
+}
+
+.subordinates .tcard::before {
+  top: -10px;
+  left: 50%;
+  width: 2px;
+  height: 10px;
+  background-color: #ddd;
+}
+
+.subordinates .tcard:not(:first-child)::before {
+  left: -10px;
+  top: 0;
+  height: 20px;
+}
+
+.subordinates .tcard:not(:last-child)::before {
+  left: auto;
+  right: -10px;
+  top: 0;
+  height: 20px;
+}
+
+.tcard:hover {
+  transform: scale(1.05);
+}
 
 /* About Us Section */
 .about {
   background-color: #ffffff;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .holder {
@@ -356,120 +455,6 @@ body {
 .holder>div {
   max-width: 45%;
   margin: 20px;
-}
-
-/* Our Teams Section */
-
-.ourTeam {
-  background-color: #e1e1e1;
-}
-
-.teams {
-  display: flex;
-  flex-direction: row;
-  height: auto;
-  margin: 10px;
-  padding: 20px;
-}
-
-.teamCard {
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  height: 500px;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-  background-color: #006E5E;
-  padding: 10px;
-  border-radius: 20px;
-  color: white;
-  transition: 0.3s ease-in-out;
-}
-
-.cardImage1 {
-  height: 330px;
-  width: 330px;
-  background-color: #ffe9b9;
-  background-image: url(/img/Users/image_1.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-}
-
-.cardImage2 {
-  height: 330px;
-  width: 330px;
-  background-color: #ffe9b9;
-  background-image: url(/img/Users/image_2.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-}
-
-.cardImage3 {
-  height: 330px;
-  width: 330px;
-  background-color: #ffe9b9;
-  background-image: url(/img/Users/image_3.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-}
-
-.teamCard:hover {
-  transform: translateY(-20px);
-  box-shadow: 1px 5px 10px #000000;
-}
-
-.teamCard>p {
-  bottom: 0px;
-  margin: 20px;
-}
-
-/* .image {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.housing {
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
-
-.verBar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 0.5625rem;
-  height: 27.0625rem;
-  transform: translateX(-50%);
-  background: radial-gradient(50% 50% at 50% 50%, #C6BC5B 44.67%, rgba(255, 255, 255, 0.00) 100%);
-  z-index: 9;
-}
-
-.horBar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  width: 27.0625rem;
-  height: 0.5625rem;
-  transform: translateY(-50%);
-  background: radial-gradient(50% 50% at 50% 50%, #C6BC5B 44.67%, rgba(255, 255, 255, 0.00) 100%);
-  z-index: 9;
-} */
-
-.image>img {
-  transform: scale(75%);
 }
 
 /* Footer section */

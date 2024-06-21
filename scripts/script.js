@@ -8,11 +8,18 @@ window.addEventListener('scroll', function() {
 });
 
 
-document.getElementById("knowMore").onclick = function () {
+document.getElementById("serv1").onclick = function () {
     location.href = "/pages/serviceDetailes.html";
 };
 
+document.getElementById("serv2").onclick = function () {
+    location.href = "#"
+}
 
-document.getElementById("contactus").onclick = function () {
-    location.href = "/pages/contactUs.html";
-};
+document.getElementById("serv3").onclick = function () {
+    location.href = "#"
+}
+
+document.getElementById("serv4").onclick = function () {
+    location.href = "#"
+}
