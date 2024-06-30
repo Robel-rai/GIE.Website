@@ -11,13 +11,14 @@
 /* Resetting margins */
 * {
   margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "montserrat";
+  box-sizing: border-box;
 }
 
 /* Typography tweaks */
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
 
 /* 
   Setting display for images and some media elements 
@@ -86,83 +87,142 @@ h6 {
 */
 html {
   box-sizing: border-box;
-}
+  scroll-behavior: smooth;
 
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  border-radius: 100pc;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(44, 46, 2);
-  border-radius: 10px;
 }
 
 /* 
-  Started Stylizing System
+  Started Stylizing website
 */
-
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   margin: 0;
   font-family: "montserrat regular", sans-serif;
+  background-color: #fefefe;
 }
 
-.navbar {
+/* Navigation Bar*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f4f4f461;
-  backdrop-filter: blur(10px);
-  padding: 10px 30px;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  box-shadow: 0px 4px 6px #0000001a;
   z-index: 1000;
-  border-radius: 10px;
 }
 
-.navbar.sticky {
-  position: fixed;
+header::before {
+  content: '';
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  position: absolute;
+  height: 100%;
   width: 100%;
-  margin: 0;
-  width: 80%;
-  border-radius: 0px 0px 10px 10px;
+  background-color: #ffffff71;
+  backdrop-filter: blur(10px);
+  z-index: -1;
 }
 
-.navbar .logo img {
+header::after {
+  content: '';
+  top: 0;
+  left: -100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #ffff0055, transparent);
+  transition: all 0.5s ease-in-out;
+}
+
+header:hover::after {
+  left: 100%;
+}
+
+.logo {
+  width: 80px;
   height: 80px;
 }
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navbar ul li {
-  margin-left: 20px;
-}
-
-.navbar ul li a {
+nav a {
+  margin-left: 25px;
+  font-size: 20px;
+  font-family: "montserrat";
   text-decoration: none;
-  color: black;
-  font-weight: bold;
+  color: #000000;
+  font-weight: 600;
+}
+
+#check {
+  display: none;
+}
+
+.icons {
+  font-size: 40px;
+  color: white;
+  right: 5%;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 992px) {
+  header {
+    padding: 1.3rem 5%;
+  }
+}
+
+@media (max-width: 760px) {
+  .icons {
+    display: inline-flex;
+    position: absolute;
+  }
+
+  .icons #close_icon {
+    display: none;
+  }
+
+  #check:checked~.icons #menu_icon {
+    display: none;
+  }
+
+  .logo {
+    height: 100%;
+  }
+
+  #check:checked~.icons #close_icon {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #ffffff71;
+    backdrop-filter: blur(10px);
+    transition: all 0.2s ease-in-out;
+  }
+
+  #check:checked~nav {
+    height: 17.7rem;
+  }
+
+  nav a {
+    display: none;
+    font-size: 16px;
+    margin: 25px 0;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+  }
+
+  #check:checked~nav a {
+    display: block;
+  }
+
 }
 
 /*HERO Section*/
@@ -171,11 +231,11 @@ body {
 .hero {
   width: 100%;
   height: 720px;
-  background-image: url("/img/Background.png");
+  background-image: url("/img/Wonchi-worqambatour.com-wenchi-6.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
 
@@ -189,13 +249,13 @@ body {
 }
 
 .heroText {
-  font-size: 55px;
+  font-size: 5vw;
   font-family: 'montserrat black';
   text-align: center;
-  margin: 20px;
+  margin-top: 200px;
   padding: 10px;
   color: #ffffff;
-  text-shadow: 5px 2px 5px #171f17;
+  text-shadow: 5px 2px 3px #171f17;
 }
 
 .heroText>span {
@@ -217,8 +277,13 @@ body {
   border: 0px;
   width: 180px;
   background-color: #171f17;
+  transition: all 200ms ease-in;
+  box-shadow: none;
+}
+
+.buttonWrap>button>a {
+  text-decoration: none;
   color: white;
-  transition: 200ms ease-in;
 }
 
 .buttonWrap>.main {
@@ -227,6 +292,42 @@ body {
 
 .buttonWrap>button:hover {
   transform: scale(1.1);
+  box-shadow: 0px 0px 4px #e9eb7f;
+}
+
+
+@media (max-width: 760px) {
+  .buttonWrap {
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+  }
+
+  .buttonWrap>button {
+    padding: 2vw;
+    margin-top: 20px;
+    border-radius: 55px;
+    width: 180px;
+    background-color: #171f17;
+    color: white;
+    transition: 200ms ease-in;
+  }
+
+
+  .hero {
+    width: 100%;
+    height: 500px;
+    background-image: url("/img/Wonchi-worqambatour.com-wenchi-6.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+  }
+
 }
 
 /* peace of code to house the section's and put their internal contets in a flex box*/
@@ -250,9 +351,10 @@ body {
 
 .services {
   width: 100%;
-  height: 720px;
+  height: auto;
   background-color: white;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -269,7 +371,7 @@ body {
 
 .card {
   height: 75%;
-  width: 600px;
+  width: calc(100%/4);
   background-size: cover;
   font-family: 'montserrat';
   font-weight: 600;
@@ -333,7 +435,61 @@ body {
   background-image: url("/img/card4.png");
 }
 
+@media (max-width: 768px) {
+  .services {
+    height: auto;
+  }
+
+  .card {
+    height: 40%;
+    width: 10%;
+    background-size: cover;
+    font-family: 'montserrat';
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .card>h4 {
+    font-size: 30px;
+    font-style: bolder;
+    color: #f4f4f4;
+    background-color: #00000036;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .card>p {
+    font-size: 3vw;
+    background-color: #00000036;
+    text-align: left;
+    color: #f4f4f4;
+    margin-bottom: 20px;
+    border-radius: 10px 0px 10px 10px;
+  }
+
+  .card>button {
+    background-color: #006e5e;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    transition: 0.3s ease-in-out;
+  }
+
+  .card>button:hover {
+    background-color: #008d78;
+    transform: scale(1.1);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+  }
+
+}
+
 /* Our Teams Section */
+
+
+
 #Teams {
   background-color: #e3e3e3;
   padding-bottom: 100px;
@@ -382,6 +538,7 @@ body {
 
 .subordinates {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
 }
@@ -396,55 +553,31 @@ body {
   background-color: #ddd;
 }
 
-.tcard:not(:first-child)::before {
-  top: 0;
-  height: 20px;
-}
-
-.subordinates::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  width: 2px;
-  height: 10px;
-  background-color: #ddd;
-}
-
-.subordinates .tcard::before {
-  top: -10px;
-  left: 50%;
-  width: 2px;
-  height: 10px;
-  background-color: #ddd;
-}
-
-.subordinates .tcard:not(:first-child)::before {
-  left: -10px;
-  top: 0;
-  height: 20px;
-}
-
-.subordinates .tcard:not(:last-child)::before {
-  left: auto;
-  right: -10px;
-  top: 0;
-  height: 20px;
-}
 
 .tcard:hover {
   transform: scale(1.05);
 }
 
+
+@media (max-width: 768px) {
+  .tcard {
+    padding: auto;
+  }
+}
+
 /* About Us Section */
+
+
+
 .about {
   background-color: #ffffff;
   margin-top: 100px;
   margin-bottom: 100px;
+  height: auto;
 }
 
 .holder {
-  height: 720px;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -455,6 +588,32 @@ body {
 .holder>div {
   max-width: 45%;
   margin: 20px;
+}
+
+@media (max-width: 765px) {
+  #aboutUs {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .holder {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .holder>div {
+    max-width: 75%;
+    margin: 20px;
+  }
+
+  .image {
+    display: none;
+  }
 }
 
 /* Footer section */
@@ -579,3 +738,7 @@ body {
     background-positon-x: 0px;
   }
 }
+
+
+
+@media (max-width: 400px) {}

@@ -7,28 +7,44 @@
     <title>GIE</title>
     <link rel="stylesheet" href="styles/global.css">
     <link rel="icon" href="/img/logo-url.svg">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="logo">
-            <img src="/img/GIE-logo.png" alt="GIE">
-        </div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#ourServices">Services</a></li>
-            <li><a href="#Teams">Team</a></li>
-            <li><a href="#aboutUs">About us</a></li>
-            <li><a href="pages/contactUs.html">Contact Us</a></li>
-        </ul>
-    </nav>
-    <!-- `Hero Section -->
-    <div id="home" class="hero section blocks">
+
+    <!--Navigation Bar-->
+
+    <header>
+        <a href="#home">
+            <img class="logo" src="/img/GIE-logo.png" alt="GIE logo">
+        </a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu_icon"></i>
+            <i class='bx bx-x' id="close_icon"></i>
+        </label>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#ourServices">Service</a>
+            <a href="#Teams">Team</a>
+            <a href="#aboutUs">About</a>
+            <a href="/pages/contactUs.html">Contact</a>
+        </nav>
+    </header>
+
+    <!--Hero Section -->
+
+    <div id="home" class="hero">
         <div class="heroContainer">
-            <h1 class="heroText">Welcome To <span>GEOLOGICAL INSTITUTE OF ETHIOPIA</span></h1>
+            <h1 class="heroText">
+                Welcome To <span> GEOLOGICAL INSTITUTE OF ETHIOPIA</span>
+            </h1>
             <div class="buttonWrap">
-                <button class="main">EXPLORE ETHIOPIA</button>
-                <button>GEOGRAPY</button>
+                <button class="main"><a href="/pages/contactUs.html">EXPLORE ETHIOPIA</a></button>
+                <button><a href="#services">OUR SERVICES</a></button>
             </div>
         </div>
     </div>
@@ -37,6 +53,7 @@
 
     <!-- Services Section -->
     <div id="ourServices" class="container blocks">
+        
         <H2>OUR SERVICES</H2>
         <div class="services">
             <div class="card st1">
@@ -69,6 +86,7 @@
 
 
     <!-- Our Teams Section -->
+
     <div id="Teams" class="container ourTeam blocks">
         <h2>OUR TEAM</h2>
         <div class="hierarchy">
@@ -85,14 +103,12 @@
                             <h2>Jane Smith</h2>
                             <p>CTO</p>
                         </div>
-                        <div class="subordinates">
-                            <div class="tcard">
-                                <div class="profile">
-                                    <img src="img/Users/profile3.jpg" alt="Profile Image">
-                                    <h2>Mike Johnson</h2>
-                                    <p>Lead Developer</p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="tcard">
+                        <div class="profile">
+                            <img src="/img/Users/profile3.jpg" alt="Profile Image">
+                            <h2>San Robert</h2>
+                            <p>COO</p>
                         </div>
                     </div>
                     <div class="tcard">
@@ -101,14 +117,12 @@
                             <h2>Emily Davis</h2>
                             <p>COO</p>
                         </div>
-                        <div class="subordinates">
-                            <div class="tcard">
-                                <div class="profile">
-                                    <img src="img/Users/profile5.jpg" alt="Profile Image">
-                                    <h2>Laura Wilson</h2>
-                                    <p>Operations Manager</p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="tcard">
+                        <div class="profile">
+                            <img src="/img/Users/profile5.jpg" alt="Profile Image">
+                            <h2>Jimi Jimbo</h2>
+                            <p>COO</p>
                         </div>
                     </div>
                 </div>
@@ -117,6 +131,8 @@
     </div>
 
     <!-- About Us Section -->
+
+
     <div id="aboutUs" class="container about blocks">
         <h2>ABOUT US</h2>
         <div class="holder">
@@ -155,6 +171,8 @@
             </div>
         </div>
     </div>
+
+    <!--Footer Section-->
     <footer class="footer">
         <div class="waves">
             <div class="wave" id="wave1"></div>

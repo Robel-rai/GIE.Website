@@ -1,18 +1,21 @@
 body {
     display: flex;
     flex-direction: column;
+    background: url(/img/Wonchi-worqambatour.com-wenchi-6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(10px);
 }
 
 .border {
     height: 150px;
     transition: filter 1s;
-    background-color: #fff3bb;
 }
 
 .holder {
     display: flex;
     flex-direction: row;
-    background-color: white;
     margin-bottom: 100px;
 }
 
@@ -73,6 +76,30 @@ body {
 .smIcon img:hover {
     transform: translateY(-10px);
     box-shadow: 0px 5px 10px 3px #fff3bb;
+}
+
+@media (max-width: 726px) {
+    .holder {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        height: auto;
+    }
+
+    .sidebar1 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .sidebar2 {
+        width: 100%;
+    }
+
+    .smIcon img {
+        width: 20px;
+        transition: all 0.3s ease-in-out;
+        border-radius: 50%;
+    }
 }
 
 
@@ -164,4 +191,36 @@ form {
 
 #message:focus {
     border-bottom: 2px black solid;
+}
+
+@media (max-width: 768px) {
+    .sidebar2 {
+        border-radius: 5px 10px 10px 5px;
+        background-color: rgb(255, 255, 255);
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        justify-content: right;
+        align-content: center;
+        box-shadow: 2px 5px 5px #0000001c;
+    }
+
+    .input_box .username {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 10%;
+    }
+
+    .input_box .userContact {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 5%;
+    }
+
 }
